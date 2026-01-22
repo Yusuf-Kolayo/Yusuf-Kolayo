@@ -13,7 +13,7 @@ I architect and maintain systems handling financial transactions, field operatio
 - Financial transaction processing with ACID compliance and audit trails
 - Query optimization: eager loading, index design, N+1 elimination
 - Firebase Cloud Messaging integration for real-time notifications
-- Payment gateway integrations (Flutterwave) with webhook handling
+- Payment gateway integrations (Flutterwave/Paystack) with webhook handling
 - Granular RBAC with route-level permissions and middleware chains
 - Schema design: composite keys, foreign key constraints, soft deletes, JSON columns
 
