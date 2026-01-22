@@ -1,158 +1,113 @@
 # Senior Full-Stack Engineer
-**Laravel Backend | Flutter Mobile | Production Systems at Scale**
+**Laravel | Flutter | Production Systems**
 
-I build production-grade systems that handle real transactions, real users, and real business operations. My work focuses on scalable backend architecture, multi-platform mobile applications, and the critical infrastructure that keeps businesses running.
+I architect and maintain systems handling financial transactions, field operations, and multi-tenant workflows for thousands of active users.
 
 ---
 
 ## Technical Expertise
 
-**Backend Engineering (Laravel/PHP)**
-- Complex approval workflow systems with multi-level authorization
-- Multi-tenant database architecture with dynamic connection management
-- Transaction-heavy financial systems with audit trails and reconciliation
-- RESTful API design with optimized query patterns and eager loading
-- Real-time notification systems using Firebase Cloud Messaging
-- Payment gateway integrations with transaction verification and retry logic
-- Role-based access control with granular route permissions
-- Database schema design with proper indexing, foreign keys, and soft deletes
+**Backend (Laravel/PHP)**
+- Multi-tenant architecture with dynamic database connections per tenant
+- Approval workflow engine with state machines and authority-based routing
+- Financial transaction processing with ACID compliance and audit trails
+- Query optimization: eager loading, index design, N+1 elimination
+- Firebase Cloud Messaging integration for real-time notifications
+- Payment gateway integrations (Flutterwave) with webhook handling
+- Granular RBAC with route-level permissions and middleware chains
+- Schema design: composite keys, foreign key constraints, soft deletes, JSON columns
 
-**Mobile Engineering (Flutter/Dart)**
-- Production apps serving thousands of active users
-- State management with Riverpod for complex business logic
-- Multi-platform development (iOS, Android, Web considerations)
-- WebView integrations for payment flows and external services
-- Offline-first architecture with local caching and sync
-- Real-time push notifications with FCM
-- PDF generation, screenshot capture, and file sharing
-- Clean service layer architecture with proper error handling
+**Mobile (Flutter/Dart)**
+- Cross-platform apps (iOS/Android) with 5K+ active installations
+- Riverpod for state management with provider composition
+- Offline-first: local SQLite cache with background sync
+- WebView integration for OAuth flows and payment processing
+- FCM push notifications with background message handling
+- PDF generation from widgets, screenshot capture, Share API integration
+- Service layer pattern with proper error propagation and retry logic
 
-**System Design & Architecture**
-- Multi-tenant SaaS platforms with isolated data models
-- Approval workflow engines with state transitions and audit logging
-- Billing and payment processing systems with reconciliation
-- Account statement generation and financial reporting
-- Field operations management with job tracking and evidence capture
-- Document generation systems (bills, receipts, statements)
-- Integration layers for third-party services
+**Architecture**
+- Multi-tenant SaaS with tenant isolation at database and cache layers
+- Event-driven workflows with before/after snapshots for rollback
+- Automated billing cycles with proration and reconciliation
+- Document generation pipeline (bills, receipts, statements)
+- Job queue processing with failed job handling and retry strategies
 
 ---
 
-## Engineering Impact
+## Production Impact
 
-I've architected and delivered systems that power waste service management operations across multiple municipalities, handling:
+Systems I've built serve municipal waste service operations across multiple locations:
 
-- **Financial Operations**: Payment processing, automated billing cycles, account reconciliation, and real-time balance tracking
-- **Workflow Automation**: Admin desk approval systems with authority-based routing, edit history tracking, and rollback capabilities
-- **Data Integrity**: Before/after snapshots for critical operations, comprehensive audit trails, and soft delete recovery
-- **User Experience**: Mobile apps with offline capability, real-time sync, push notifications, and intuitive UIs for field workers
-- **Operational Efficiency**: Job card management, route optimization, evidence collection, and performance tracking
-- **Reporting & Analytics**: Dynamic filtering, export capabilities, and data visualization for decision-making
+- Payment processing with transaction verification and balance tracking
+- Multi-level approval workflows with authority delegation
+- Automated monthly billing cycles with proration logic
+- Mobile field apps with offline operation and sync
+- Job scheduling with GPS tracking and photo evidence
+- Real-time push notifications for payment confirmations
+- Export pipelines for financial reporting and analytics
 
-The systems I build handle high-stakes operations where accuracy, reliability, and traceability are non-negotiable.
-
----
-
-## Technologies & Tools
-
-**Backend**
-- PHP 8+ | Laravel 10+ | MySQL 8+
-- RESTful APIs | JWT Authentication
-- Firebase Admin SDK | Guzzle HTTP Client
-- Queue Jobs | Event Broadcasting
-- Eloquent ORM | Database Migrations
-
-**Mobile**
-- Flutter 3+ | Dart 3+
-- Riverpod (State Management)
-- Firebase Cloud Messaging
-- Payment Gateway SDKs
-- PDF Generation | WebView Integration
-
-**DevOps & Tools**
-- Git | Composer | Pub.dev
-- MySQL Workbench | Postman
-- Firebase Console | VS Code
-- Database Indexing & Optimization
-
-**Architecture Patterns**
-- Multi-Tenancy | Service Layer Pattern
-- Repository Pattern | Observer Pattern
-- Factory Pattern | Dependency Injection
-- Clean Architecture Principles
+These systems process real transactions where data integrity and uptime are critical.
 
 ---
 
-## What I Care About as an Engineer
+## Stack
 
-**Production-First Mindset**
-I don't just write code that works—I write code that works under pressure. Every feature considers failure modes, data integrity, and user impact.
-
-**Scalability from Day One**
-Whether it's optimizing N+1 queries, implementing proper indexing, or designing for horizontal scaling, I think about growth before it becomes a problem.
-
-**Code That Others Maintain**
-Clean abstractions, clear naming, comprehensive comments where logic is complex, and documentation that explains the "why" behind architectural decisions.
-
-**Security & Data Protection**
-Proper authorization checks, SQL injection prevention, XSS protection, secure file handling, and privacy-conscious data management.
-
-**Real-World UX**
-Mobile apps that work offline, handle poor network conditions gracefully, provide immediate feedback, and don't crash when users do unexpected things.
+**Backend**: PHP 8+, Laravel 10+, MySQL 8+, Eloquent ORM, Firebase Admin SDK, Guzzle  
+**Mobile**: Flutter 3+, Dart 3+, Riverpod, FCM, WebView, PDF/Image libraries  
+**Tools**: Git, Composer, VS Code, Postman, MySQL Workbench  
+**Patterns**: Multi-tenancy, Service Layer, Repository, Factory, Observer, DI
 
 ---
 
-## How I Build Production Systems
+## Engineering Principles
 
-**Planning Phase**
-- Deep understanding of business workflows and edge cases
-- Database schema design with normalization and performance in mind
-- API contract definition before implementation
-- State machine design for complex workflows
+**Data Integrity First**  
+Database transactions, foreign key constraints, before/after snapshots, comprehensive audit trails.
 
-**Development Phase**
-- Test critical paths (especially financial transactions)
-- Transaction management for data consistency
-- Comprehensive error handling and logging
-- API response caching and query optimization
-- Migration rollback strategies
+**Performance at Scale**  
+Eager loading, proper indexing, query analysis, caching strategies, background job processing.
 
-**Deployment Phase**
-- Database backup verification before schema changes
-- Staged rollouts for critical features
-- Monitoring error logs and user feedback
-- Performance profiling and optimization
+**Defensive Programming**  
+Authorization checks at every layer, input validation, SQL injection prevention, graceful error handling.
 
-**Post-Launch**
-- Continuous optimization based on production metrics
-- Feature iteration based on real user behavior
-- Technical debt management and refactoring
-- Documentation updates for team knowledge transfer
+**Maintainable Code**  
+Clear naming, logical abstractions, inline documentation for complex logic, migration rollback plans.
+
+**Real-World UX**  
+Offline capability, poor network handling, immediate feedback, no silent failures.
 
 ---
 
-## Currently Interested In
+## Development Approach
 
-- Event-driven architectures for microservices
-- Advanced Laravel queue optimization techniques
-- Flutter performance profiling and optimization
-- Real-time collaboration features
-- Serverless functions for background processing
-- Advanced database sharding strategies
+**Pre-Development**  
+Map business workflows, design state machines, define database schema, document API contracts.
+
+**During Development**  
+Test financial paths thoroughly, wrap critical operations in transactions, log strategically, optimize queries early.
+
+**Deployment**  
+Verify backups, stage rollouts, monitor error rates, profile performance, iterate based on metrics.
+
+---
+
+## Currently Exploring
+
+Event-driven microservices, Laravel queue optimization, Flutter performance profiling, database sharding.
 
 ---
 
 ## Open to Opportunities
 
-I'm interested in roles where I can:
-- Architect backend systems that handle scale and complexity
-- Build mobile applications that serve real business needs
-- Work with teams that value code quality and system reliability
-- Solve challenging technical problems with measurable impact
-- Mentor engineers and contribute to technical culture
+Looking for roles involving:
+- Backend systems requiring scale and complexity
+- Mobile apps with real business impact
+- Teams that prioritize reliability and code quality
+- Technical challenges with measurable outcomes
 
-**Contact**: Open to discussing opportunities via GitHub or LinkedIn.
+**Contact**: Available via GitHub or LinkedIn.
 
 ---
 
-*This profile showcases technical depth from production codebases I've built and maintained. I focus on systems that work, scale, and deliver business value.*
+*Production systems engineer. I build things that work.*
